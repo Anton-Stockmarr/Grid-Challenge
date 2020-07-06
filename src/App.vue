@@ -75,9 +75,8 @@ export default {
 
 
 .wrapper{
-    width: 1000px;
-    margin: 0 auto;
-    padding: 30px 0;
+    width: calc(100% - 2em);
+    margin: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;

@@ -1,10 +1,10 @@
 <template>
     <div id="table-box">
-        <table style="width: 70%">
+        <table style="width: 75%">
             <colgroup>
                 <col span="1" style="width: 20%;">
                 <col span="1" style="width: 30%;">
-                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 15%;">
                 <col span="1" style="width: 10%;">
             </colgroup>
             <tr>
@@ -92,7 +92,7 @@ td p {
 }
 
 table {
-    font-size: 12px;
+    font-size: 16px;
     table-layout: fixed;
     margin: 30px auto 0;
 }

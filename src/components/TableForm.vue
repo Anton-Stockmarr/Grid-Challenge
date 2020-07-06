@@ -1,19 +1,15 @@
 <template>
     <div id="table-form-box">
         <h2>Add new person to the table:</h2>
-        <div>
+        <div id="table-form">
             <label>First name:</label>
             <input type ="text" v-model="firstName" :class="{inputError: firstNameError}">
-        </div>
-        <div>
             <label>Last name:</label>
             <input type ="text" v-model="lastName" :class="{inputError: lastNameError}">
-        </div>
-        <div>
             <label>Age:</label>
             <input type ="number" v-model="age" :class="{inputError: ageError}">
         </div>
-        <button id="submit-row" type="submit" @click="addEntry()">Add</button>
+        <button id="submit-row" type="submit" @click="addEntry()">Add</button>            
     </div>
 </template>
 
@@ -77,37 +73,43 @@ export default {
 
 <style scoped>
 
-#table-form-box {
+#table-form-box {  
     height: 100%;
     background-color: #BFDAB8;
     border: 1px solid black;
 }
 
-#table-form-box div{
-    align-content: center;
+#table-form {
+    display: grid;
+    margin: 0 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
 }
 
+
 h2 {
+    text-align: center;
     padding: 20px 0;
     line-height: 30px;
-    text-align: center;    
 }
+
 
 label {
     line-height: 30px;
-    display: inline-block;
-    width: 140px;
-    text-align: right;
+    display: block;
 }
+
+input {
+    width: calç(100% - 4px);
+}
+
 
 #submit-row {
     display: block;
-    width: 100px;
-    height: 20px;
-    margin: 30px auto 0;
-    align-content: center;
+    height: 40px;
+    width: 80%;
+    margin: 20px 10%;
 }
-
 .inputError {
     box-shadow: 0px 0px 10px red;
 }

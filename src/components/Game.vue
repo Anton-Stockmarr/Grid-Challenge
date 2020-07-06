@@ -1,7 +1,9 @@
 <template>
-    <div id="item" @click="toggleItem()" :class="{selected: this.selected}">
-        <h1 id="item-name">{{name}}</h1>
-        <h1 id="item-cost">{{cost}}</h1>
+    <div id="game">
+        <img :src="this.source">
+        <div class="game-name">
+            <h1>{{name}}</h1>
+        </div>
     </div>
 </template>
 
@@ -10,21 +12,18 @@
 <script>
 export default {
     name: 'Game',
-    props: ["id","name","cost"],
+    props: ["id","name","image"],
     data() {
       return {
-          selected: false
+          source: ""
         }
     },
-    methods: {
-        toggleItem() {
-            this.selected = !this.selected;
-            if (this.selected) {
-                this.$emit("addItem",this.id, this.cost);
-            } else {
-                this.$emit("removeItem",this.id, this.cost);    
-            }
-
+    mounted() {
+        try {      
+            this.source = require(`@/assets/games/${this.image}`);
+        } catch (err) {
+            console.log(err);
+            this.source = require("@/assets/games/NotFound.jpg");
         }
     }
 }
@@ -34,31 +33,30 @@ export default {
 
 <style scoped>
 
-#item {
-    cursor: pointer;
+#game {
     background-color: white;
     border: 1px black solid;
-    height: 40px;
-    padding: 0 10px;
+    height: 65px;
+
+    padding: 5px 10px;
 }
 
-.selected {
-    background-color: lightblue !important;
-}
-
-#item-name {
+#game img {
     display: block;
+    height: 65px;
+    width: 50px;
     float: left;
 }
 
-#item-cost {
-    display: block;
+
+.game-name {
+    display: flex;
     float: right;
+    width: calc(100% - 70px);
+    height: 65px;
+    font-size: 20px;
+    margin: auto 0 auto 20px;
+    align-items: center;
 }
-
-#item h1 {
-    line-height: 40px;
-}
-
 
 </style>
