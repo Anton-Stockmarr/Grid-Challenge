@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 #search-grid-box {
-    height: 100%;
+    height: calc(100% - 2px);
     border: black 1px solid;
     background-color: #DFC58D;
 }

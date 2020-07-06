@@ -80,40 +80,8 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: 1fr;
-    grid-template-areas:
-    "one two three"
-    "four five six"
-    "seven eight nine";
     grid-gap: 10px;
 }
 
-
-.wrapper #clock{
-    grid-area: one;
-}
-.wrapper #login{
-    grid-area: two;
-}
-.wrapper #quiz{
-    grid-area: three;
-}
-.wrapper #table{
-    grid-area: four;
-}
-.wrapper #table-form{
-    grid-area: five;
-}
-.wrapper #buy-list{
-    grid-area: six;
-}
-.wrapper #search-list-box{
-    grid-area: seven;
-}
-.wrapper #search-grid-box{
-    grid-area: eight;
-}
-.wrapper #eight-ball-box{
-    grid-area: nine;
-}
 
 </style>

@@ -74,7 +74,7 @@ export default {
 <style scoped>
 
 #table-form-box {  
-    height: 100%;
+    height: calc(100% - 2px);
     background-color: #BFDAB8;
     border: 1px solid black;
 }

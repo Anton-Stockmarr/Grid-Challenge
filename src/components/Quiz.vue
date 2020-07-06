@@ -110,8 +110,9 @@ export default {
 
 <style scoped>
 #quiz-box {
-    height: calc(100% - 40px);
+    height: calc(100% - 42px);
     background-color: #658B6F;
+    border: 1px solid black;
     display: grid;
     padding: 20px;
     grid-template-columns: 1fr 1fr;

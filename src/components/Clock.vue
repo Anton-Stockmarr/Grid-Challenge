@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 #clock-box {
-    height: 100%;
+    height: calc(100% - 2px);
     border: black 1px solid;
     display: flex;
     background-color: #222;

@@ -1,9 +1,11 @@
 <template>
     <div id="search-list-box">
         <input type="text" id="search-bar" placeholder="search..." v-model="searchKey">
-        <div id="search-results">
-            <div v-bind:key="game.id" v-for="game in games" v-show="inSearch(game.name)">
-                <Game v-bind="game"/>
+        <div id="search-result-box">
+            <div id="search-results">
+                <div v-bind:key="game.id" v-for="game in games" v-show="inSearch(game.name)">
+                    <Game v-bind="game"/>
+                </div>
             </div>
         </div>
     </div>
@@ -73,9 +75,9 @@ export default {
 
 <style scoped>
 #search-list-box {
+    height: calc(100% - 2px);
     border: black 1px solid;
     background-color: #EADFB7;
-    height: 100%;
 }
 
 #search-bar {
@@ -87,10 +89,14 @@ export default {
 
 #search-results {
     box-shadow: 0 0 7px black;
-    width: 90%;
-    margin: 30px auto;
     max-height: 300px;
     overflow: auto;
+}
+
+#search-result-box {
+    width: 90%;
+    margin: 0 auto 30px;
+    height: 300px;
 }
 </style>
 

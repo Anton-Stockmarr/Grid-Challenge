@@ -58,7 +58,7 @@ export default {
 
 <style scoped>
 #buy-list-box {
-    height: calc(100% - 40px);
+    height: calc(100% - 42px);
     background-color: #DCEBA9;
     border: black 1px solid;
     padding: 20px;

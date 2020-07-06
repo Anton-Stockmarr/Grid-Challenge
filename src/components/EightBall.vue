@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 #eight-ball-box {
-    height: 100%;
+    height: calc(100% - 2px);
     border: black 1px solid;
     background-color: #DFAD98;
 }

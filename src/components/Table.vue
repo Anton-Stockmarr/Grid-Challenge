@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 #table-box {
-    height: 100%;
+    height: calc(100% - 2px);
     border: black 1px solid;
     background-color: #99AEAD;
 }

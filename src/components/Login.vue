@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 #login-box {
-    height: calc(100% - 40px);
+    height: calc(100% - 42px);
     border: black 1px solid;
     background-color: #28363D;
     display: grid;
