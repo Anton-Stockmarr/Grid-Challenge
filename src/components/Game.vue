@@ -1,7 +1,7 @@
 <template>
-    <div id="game">
+    <div :class="{listGame: this.type==='list', gridGame: this.type==='grid'}">
         <img :src="this.source">
-        <div class="game-name">
+        <div class="game-name" v-if="type==='list'">
             <h1>{{name}}</h1>
         </div>
     </div>
@@ -12,7 +12,7 @@
 <script>
 export default {
     name: 'Game',
-    props: ["id","name","image"],
+    props: ["id","name","image","type"],
     data() {
       return {
           source: ""
@@ -33,21 +33,22 @@ export default {
 
 <style scoped>
 
-#game {
+img {
+    height: 65px;
+    width: 50px;
+}
+
+
+.listGame {
     background-color: white;
     border: 1px black solid;
     height: 65px;
-
     padding: 5px 10px;
 }
 
-#game img {
-    display: block;
-    height: 65px;
-    width: 50px;
+.listGame img {
     float: left;
 }
-
 
 .game-name {
     display: flex;
@@ -57,6 +58,16 @@ export default {
     font-size: 20px;
     margin: auto 0 auto 20px;
     align-items: center;
+}
+
+.gridGame {
+    background-color: white;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
 }
 
 </style>
