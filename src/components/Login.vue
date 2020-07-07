@@ -18,8 +18,8 @@ export default {
     data() {
       return {
         username: '',
-        password: "",
-        success: ""
+        password: '',
+        success: ''
         }
     },
     methods: {
@@ -45,11 +45,6 @@ export default {
     padding: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "username"
-    "password"
-    "button"
-    "response";
     grid-gap: 20px;
 }
 
@@ -61,21 +56,12 @@ export default {
     border: #111 1px solid;
 }
 
-#login-box .username {
-    grid-area: username;
-    
-}
-#login-box .password {
-    grid-area: password;
-}
 #login-box .login {
     border: #111 1px solid;
-    grid-area: button;
     font-size: 32px;
     background-color: #ccc;
 }
 #login-box .response {
-    grid-area: response;
     display: flex;
     justify-content: center;
     align-items: center;

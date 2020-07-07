@@ -1,5 +1,5 @@
 <template>
-    <div id="quiz-box" class="box">
+    <div id="quiz-box">
         <div id="question" v-bind:key="question.page" v-for="question in questions">
             <QuizQuestion :ref="'question'+question.page" v-show="page==question.page" v-bind:question="question"/>
         </div>

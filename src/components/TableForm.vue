@@ -19,9 +19,6 @@
 <script>
 export default {
     name: "TableForm",
-    components: {
-
-    },
     data() {
         return {
             firstName: '',

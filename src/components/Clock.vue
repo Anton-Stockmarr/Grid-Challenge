@@ -8,8 +8,6 @@
 
 export default {
     name: 'Clock',
-    components: {
-    },
     data() {
       return {
         time: ''
@@ -37,7 +35,7 @@ export default {
             this.time = clockTime;
         }
     },
-    created() {
+    mounted() {
         this.updateClock();
         const oneSecond = 1000;
         setInterval(this.updateClock,oneSecond,this);

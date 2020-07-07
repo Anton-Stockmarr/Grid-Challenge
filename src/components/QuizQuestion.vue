@@ -17,8 +17,6 @@
 <script>
 export default {
     name: "QuizQuestion",
-    components: {
-    },
     props: ["question"],
     data() {
         return {
@@ -54,7 +52,6 @@ export default {
 }
 
 #question-text {
-    grid-area: question;
     font-size: 20px;
     text-align: center;
 }

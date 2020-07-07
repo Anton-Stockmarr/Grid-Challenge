@@ -28,8 +28,6 @@
 
 export default {
     name: "Table",
-    components: {
-    },
     data() {
         return {
             idCounter: 4,

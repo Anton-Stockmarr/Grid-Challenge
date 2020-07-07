@@ -51,7 +51,7 @@ export default {
                 }
                 self.buttonBlocker = false;
                 self.showAnswer = true;
-            }, 1000);
+            }, 1000,this);
         }
     }
 }

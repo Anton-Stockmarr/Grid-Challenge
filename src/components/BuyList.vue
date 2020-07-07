@@ -2,7 +2,7 @@
     <div id="buy-list-box">
         <div id="item-list">
             <div v-bind:key="item.id" v-for="item in this.items">
-                <Item class="item" v-bind:id="item.id" v-bind:name="item.name" v-bind:cost="item.cost" v-on:addItem="addItem" v-on:removeItem="removeItem"/>
+                <Item class="item" v-bind="item" v-on:addItem="addItem" v-on:removeItem="removeItem"/>
             </div>
         </div>
         <div>
@@ -36,7 +36,7 @@ export default {
               {id: 10, name: "Sweater", cost: 19},
               {id: 11, name: "Socks", cost: 6},
               {id: 12, name: "Skirt", cost: 10},
-],
+            ],
           selected: [],
           total: 0
         }
